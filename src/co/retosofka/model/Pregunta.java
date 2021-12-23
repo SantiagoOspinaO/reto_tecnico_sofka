@@ -1,4 +1,3 @@
-
 package co.retosofka.model;
 
 import co.retosofka.model.Categoria;
