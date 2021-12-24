@@ -13,7 +13,39 @@ public class Historico {
         this.pregunta = pregunta;
         this.opcionRespuesta = opcionRespuesta;
     }
-    
+
+    public Jugador getJugador() {
+        return jugador;
+    }
+
+    public void setJugador(Jugador jugador) {
+        this.jugador = jugador;
+    }
+
+    public Pregunta getPregunta() {
+        return pregunta;
+    }
+
+    public void setPregunta(Pregunta pregunta) {
+        this.pregunta = pregunta;
+    }
+
+    public OpcionRespuesta getOpcionRespuesta() {
+        return opcionRespuesta;
+    }
+
+    public void setOpcionRespuesta(OpcionRespuesta opcionRespuesta) {
+        this.opcionRespuesta = opcionRespuesta;
+    }
+
+    public boolean isGana() {
+        return gana;
+    }
+
+    public void setGana(boolean gana) {
+        this.gana = gana;
+    }
+      
     
     
 }
