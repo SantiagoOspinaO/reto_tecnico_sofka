@@ -1,32 +1,26 @@
 package co.retosofka.conexion;
 
-import com.sun.jdi.connect.spi.Connection;
 import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.Statement;
 
 
 public class ConexionBD {
     
-    public String driver = "com.mysql.cj.jdbc.Driver";
-    public String user = "postgres";
-    public String pass = "Admin";
-    public String url = "jdbc:mysql://localhost:3306/";
-    public String nameBD = "retosofka_BD";
     
-    public Connection connection;
-
-    public ConexionBD() {
-    }
+    String database = "C:\\Users\\Usuario\\OneDrive\\Documentos\\Projects Netbeans\\Base de datos\\retosofka_BD.db";
+    String url = "jdbc:sqlite:";
+    
+    public Connection connection = null;
    
-    public Connection Conexion() {
+    public void Conexion() {
         try{
-            Class.forName(driver);
-            connection =  (Connection) DriverManager.getConnection(url + nameBD, user, pass);
+            connection = DriverManager.getConnection(url + database);
             System.out.println("Conexion establecida");
             
         } catch (Exception e){
             System.out.println("Error de conexion: " + e);
         }
-        return connection;
-    }    
-    
+    }
+   
 }
